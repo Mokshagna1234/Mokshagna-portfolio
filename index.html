@@ -1,317 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mokshagna | Software Developer</title>
-
-  <link rel="stylesheet" href="style.css" />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    rel="stylesheet"
-  />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mokshagna | Python Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<header class="navbar">
-  <div class="logo">Mokshagna Chary Bheemavaram</div>
+<canvas id="canvas-bg"></canvas>
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="curR"></div>
 
-  <nav class="nav-links">
-    <a href="#home" class="nav-link active">Home</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#services" class="nav-link">Services</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#contact" class="nav-link">Contact</a>
+<!-- NAVBAR -->
+<header class="nav" id="nav">
+  <div class="nav-logo">Mokshagna chary</div>
+  <nav class="nav-links" id="navLinks">
+    <a href="#home"       class="nl on">Home</a>
+    <a href="#about"      class="nl">About</a>
+    <a href="#experience" class="nl">Experience</a>
+    <a href="#skills"     class="nl">Skills</a>
+    <a href="#projects"   class="nl">Projects</a>
+    <a href="#services"   class="nl">Services</a>
+    <a href="#contact"    class="nl">Contact</a>
   </nav>
+  <button class="hbg" id="hbg" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
-<!-- ================= HERO ================= -->
+<nav class="mob-nav" id="mobNav">
+  <a href="#home"       class="nl on">Home</a>
+  <a href="#about"      class="nl">About</a>
+  <a href="#experience" class="nl">Experience</a>
+  <a href="#skills"     class="nl">Skills</a>
+  <a href="#projects"   class="nl">Projects</a>
+  <a href="#services"   class="nl">Services</a>
+  <a href="#contact"    class="nl">Contact</a>
+</nav>
+
+<!-- 1. HOME -->
 <section id="home" class="hero">
-  <div class="hero-text">
-    <h1>Hi, I’m Mokshagna</h1>
-
-    <h2 class="role-text">
-      <span id="role">Full Stack Developer</span>
-    </h2>
-
-    <p>
-      Aspiring Software Developer with a strong foundation in backend development,
-      data analysis, and clean coding practices.
+  <div class="hero-left">
+    <div class="hero-tag">
+      Available for Opportunities
+      <span class="tag-dot"></span>
+    </div>
+    <h1 class="hero-h1">
+      Hi, I'm
+      <span class="name">Mokshagna</span>
+    </h1>
+    <div class="typerow">
+      <div class="typerow-bar"></div>
+      <span id="role">Python Developer</span>
+    </div>
+    <p class="hero-desc">
+      Python Developer with hands-on internship experience building full-stack web apps
+      using Django &amp; REST APIs at <strong class="highlight-text">RKIT Labs</strong>.
+      Two production-grade apps shipped — clean PEP8 code, fast APIs, JWT auth,
+      and solid database design.
     </p>
-
-    <div class="hero-actions">
-      <a href="#projects" class="btn primary">View Projects</a>
-
-      <a
-        href="assets/resume/Mokshagna_Resume.pdf"
-        class="btn ghost"
-        target="_blank"
-      >
-        Resume
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-primary">
+        <span><i class="bi bi-grid-3x3-gap-fill"></i> View Projects</span>
+      </a>
+      <a href="assets/resume/Mokshagna_Resume.pdf" class="btn btn-ghost" target="_blank">
+        <i class="bi bi-cloud-download"></i> Resume
       </a>
     </div>
   </div>
 
-  <div class="hero-visual">
-    <div class="visual-mask">
-      <img src="assets/work2.png" alt="Developer Workspace" />
+  <div class="hero-right">
+    <div class="img-stage">
+      <div class="ring"></div>
+      <div class="img-card">
+        <img src="assets/work2.png" alt="Developer workspace"/>
+      </div>
+      <div class="chip chip-a"><i class="bi bi-filetype-py" style="color:#f59e0b"></i> Python Dev</div>
+      <div class="chip chip-b"><i class="bi bi-layers-fill" style="color:#10b981"></i> Django / DRF</div>
+      <div class="chip chip-c"><i class="bi bi-mortarboard-fill" style="color:#f59e0b"></i> CGPA 8.36</div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">Scroll<span></span></div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- 2. ABOUT -->
+<section id="about" class="sec sec-dark">
+  <div class="r">
+    <div class="sec-eye">About</div>
+    <h2 class="sec-h">Who I Am</h2>
+  </div>
+
+  <div class="bento r">
+    <div class="bento-card bento-wide">
+      <div class="bento-label">Professional Summary</div>
+      <p class="about-bio">
+        <strong>B.Tech graduate in AI &amp; Data Science</strong> and a Python Developer
+        with real internship experience at RKIT Labs — building two full-stack products
+        end-to-end. I specialise in <strong>Django, REST APIs, JWT authentication</strong>,
+        and clean database design, writing code that is readable, PEP8-compliant, and built to last.
+      </p>
+    </div>
+    <div class="bento-card">
+      <div class="bento-icon"><i class="bi bi-graph-up-arrow" style="color:#10b981"></i></div>
+      <div class="bento-val" style="color:#10b981">8.36</div>
+      <div class="bento-label">CGPA Score</div>
+      <div class="bento-sub">B.Tech — AI &amp; DS</div>
+    </div>
+    <div class="bento-card">
+      <div class="bento-icon"><i class="bi bi-layers-half" style="color:#7c3aed"></i></div>
+      <div class="bento-val" style="color:#7c3aed">6 Mo</div>
+      <div class="bento-label">Internship</div>
+      <div class="bento-sub">RKIT Labs · Hyderabad</div>
+    </div>
+    <div class="bento-card">
+      <div class="bento-icon"><i class="bi bi-speedometer2" style="color:#06b6d4"></i></div>
+      <div class="bento-val" style="color:#06b6d4">25%</div>
+      <div class="bento-label">Faster APIs</div>
+      <div class="bento-sub">Data retrieval boost</div>
+    </div>
+    <div class="bento-card">
+      <div class="bento-icon"><i class="bi bi-award-fill" style="color:#f59e0b"></i></div>
+      <div class="bento-val" style="color:#f59e0b">3</div>
+      <div class="bento-label">Certifications</div>
+      <div class="bento-sub">Python · Java · JSpiders</div>
+    </div>
+  </div>
+
+  <div class="edu-wrap r">
+    <div class="edu-title"><i class="bi bi-mortarboard-fill"></i> Education</div>
+    <div class="timeline">
+      <div class="tcard">
+        <div class="tcard-yr">Nov 2021 – May 2025</div>
+        <h4>B.Tech – Artificial Intelligence &amp; Data Science</h4>
+        <p>J.N.N Institute of Engineering</p>
+        <span class="tcard-grade">CGPA: 8.36</span>
+      </div>
+      <div class="tcard">
+        <div class="tcard-yr">Jun 2019 – May 2021</div>
+        <h4>Intermediate – MPC</h4>
+        <p>Narayana Junior College, Nellore</p>
+        <span class="tcard-grade">Percentage: 96.3%</span>
+      </div>
+      <div class="tcard">
+        <div class="tcard-yr">Jun 2018 – May 2019</div>
+        <h4>SSC</h4>
+        <p>Sri Netaji Pilot High School, Nellore</p>
+        <span class="tcard-grade">CGPA: 9.8</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cert-wrap r">
+    <div class="cert-title"><i class="bi bi-patch-check-fill"></i> Certifications</div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon cert-icon-a"><i class="bi bi-filetype-py"></i></div>
+        <div class="cert-info">
+          <div class="cert-name">Python Full Stack Development</div>
+          <div class="cert-org">JSpiders</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon cert-icon-b"><i class="bi bi-code-slash"></i></div>
+        <div class="cert-info">
+          <div class="cert-name">Python Course</div>
+          <div class="cert-org">Prep Insta Prime</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon cert-icon-c"><i class="bi bi-cup-hot-fill"></i></div>
+        <div class="cert-info">
+          <div class="cert-name">Programming in Java</div>
+          <div class="cert-org">NPTEL</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section">
-  <h2>About Me</h2>
+<div class="sec-divider"></div>
 
-  <p class="about-text">
-    I am a B.Tech graduate in Artificial Intelligence and Data Science with
-    hands-on experience in Python, SQL, and backend systems. I enjoy solving
-    real-world problems using data and building reliable, maintainable software.
-  </p>
-
-  <!-- ===== EDUCATION ===== -->
-  <div class="education-wrapper">
-    <h3 class="edu-title">Education</h3>
-
-    <div class="edu-timeline">
-
-      <div class="edu-card">
-        <div class="edu-year">2021 – 2025</div>
-        <div class="edu-content">
-          <h4>B.Tech – Artificial Intelligence & Data Science</h4>
-          <p>J.N.N Institute of Engineering</p>
-          <span>CGPA: 8.36</span>
-        </div>
-      </div>
-
-      <div class="edu-card">
-        <div class="edu-year">2019 – 2021</div>
-        <div class="edu-content">
-          <h4>Intermediate – MPC</h4>
-          <p>Narayana Junior College</p>
-          <span>Percentage: 96.3%</span>
-        </div>
-      </div>
-
-      <div class="edu-card">
-        <div class="edu-year">2018 – 2019</div>
-        <div class="edu-content">
-          <h4>SSC</h4>
-          <p>Sri Netaji Pilot High School</p>
-          <span>CGPA: 9.8</span>
-        </div>
-      </div>
-
-    </div>
+<!-- 3. EXPERIENCE -->
+<section id="experience" class="sec">
+  <div class="r">
+    <div class="sec-eye">Experience</div>
+    <h2 class="sec-h">Where I've Worked</h2>
   </div>
 
-  <br />
-
-  <!-- ===== TECHNOLOGIES ===== -->
-  <div class="tech-wrapper">
-    <h3 class="tech-title">Technologies & Tools</h3>
-    <p class="tech-sub">
-      I use a modern, reliable stack to build scalable and performant applications.
-    </p>
-
-    <div class="tech-grid">
-      <div class="tech-card">Java</div>
-      <div class="tech-card">Python</div>
-      <div class="tech-card">SQL</div>
-      <div class="tech-card">Django</div>
-      <div class="tech-card">Spring Boot</div>
-      <div class="tech-card">HTML</div>
-      <div class="tech-card">CSS</div>
-      <div class="tech-card">JavaScript</div>
-      <div class="tech-card">Power BI</div>
-      <div class="tech-card">MySQL</div>
-      <div class="tech-card">Git</div>
-      <div class="tech-card">GitHub</div>
+  <div class="exp-card r">
+    <div class="exp-header">
+      <div class="exp-logo"><i class="bi bi-building-fill"></i></div>
+      <div class="exp-meta">
+        <h3 class="exp-title">Python Full Stack Developer <span class="exp-type">Intern</span></h3>
+        <div class="exp-company">RKIT Labs</div>
+        <div class="exp-details">
+          <span><i class="bi bi-geo-alt-fill"></i> Hyderabad, Telangana, India</span>
+          <span><i class="bi bi-calendar3"></i> Jul 2025 – Dec 2025 &nbsp;·&nbsp; 6 months</span>
+        </div>
+      </div>
+    </div>
+    <ul class="exp-bullets">
+      <li>
+        <span class="bullet-dot"></span>
+        Built two full-stack web applications — a <strong>Real Estate platform</strong> and a <strong>Jewellery e-commerce site</strong> — using Python, Django, and REST APIs, from initial development to a working product.
+      </li>
+      <li>
+        <span class="bullet-dot"></span>
+        Created REST APIs using <strong>Django REST Framework</strong> for product listings, inventory, search, and user flows — cutting data retrieval time by <span class="exp-highlight">~25%</span>.
+      </li>
+      <li>
+        <span class="bullet-dot"></span>
+        Set up <strong>JWT-based authentication</strong> with separate admin and user roles, making both applications more secure and easier to manage.
+      </li>
+      <li>
+        <span class="bullet-dot"></span>
+        Designed <strong>MySQL database schemas</strong> and fine-tuned Django ORM queries to keep things running fast and the data layer clean and maintainable.
+      </li>
+      <li>
+        <span class="bullet-dot"></span>
+        Maintained <strong>PEP8-compliant</strong> code throughout; used <code>pip</code> and <code>virtualenv</code> for dependency management and Git feature branches to stay organised.
+      </li>
+    </ul>
+    <div class="exp-tags">
+      <span class="tag">Python</span>
+      <span class="tag">Django</span>
+      <span class="tag">DRF</span>
+      <span class="tag">JWT</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">MongoDB</span>
+      <span class="tag">REST APIs</span>
+      <span class="tag">Git</span>
     </div>
   </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
-<section id="services" class="section light">
-  <h2>What I Do</h2>
+<div class="sec-divider"></div>
 
-  <div class="services-grid">
+<!-- 4. SKILLS -->
+<section id="skills" class="sec sec-dark">
+  <div class="r">
+    <div class="sec-eye">Skills</div>
+    <h2 class="sec-h">My Tech Stack</h2>
+  </div>
 
-    <div class="service-card">
-      <h3>Backend Development</h3>
-      <p>
-        I design and develop backend systems using Python and Java, focusing on
-        clean architecture, database integration, and reliable business logic.
-      </p>
+  <div class="skills-grid r">
+    <div class="skill-cat">
+      <div class="skill-cat-head"><i class="bi bi-filetype-py"></i> Languages</div>
+      <div class="skill-pills">
+        <span class="spill spill-primary">Python</span>
+        <span class="spill spill-secondary">SQL</span>
+        <span class="spill spill-secondary">HTML</span>
+        <span class="spill spill-secondary">CSS</span>
+        <span class="spill spill-secondary">JavaScript</span>
+        <span class="spill spill-muted">Java</span>
+      </div>
     </div>
-
-    <div class="service-card">
-      <h3>Data Analysis</h3>
-      <p>
-        I analyze structured datasets using Python libraries to extract insights,
-        identify patterns, and support data-driven decision making.
-      </p>
+    <div class="skill-cat">
+      <div class="skill-cat-head"><i class="bi bi-layers"></i> Frameworks</div>
+      <div class="skill-pills">
+        <span class="spill spill-primary">Django</span>
+        <span class="spill spill-primary">Django REST Framework</span>
+        <span class="spill spill-secondary">Django ORM</span>
+      </div>
     </div>
-
-    <div class="service-card">
-      <h3>Web Application Development</h3>
-      <p>
-        I build responsive web applications using HTML, CSS, and JavaScript with
-        emphasis on usability, performance, and maintainable code.
-      </p>
+    <div class="skill-cat">
+      <div class="skill-cat-head"><i class="bi bi-database-fill"></i> Databases</div>
+      <div class="skill-pills">
+        <span class="spill spill-cyan">MySQL</span>
+        <span class="spill spill-cyan">MongoDB</span>
+        <span class="spill spill-muted">SQL</span>
+      </div>
     </div>
+    <div class="skill-cat">
+      <div class="skill-cat-head"><i class="bi bi-tools"></i> Tools</div>
+      <div class="skill-pills">
+        <span class="spill spill-amber">Git</span>
+        <span class="spill spill-amber">GitHub</span>
+        <span class="spill spill-amber">Cursor IDE</span>
+        <span class="spill spill-amber">Power BI</span>
+        <span class="spill spill-muted">pip / virtualenv</span>
+      </div>
+    </div>
+    <div class="skill-cat">
+      <div class="skill-cat-head"><i class="bi bi-shield-lock-fill"></i> Concepts</div>
+      <div class="skill-pills">
+        <span class="spill spill-green">JWT Auth</span>
+        <span class="spill spill-green">REST APIs</span>
+        <span class="spill spill-green">OOP</span>
+        <span class="spill spill-green">PEP8</span>
+        <span class="spill spill-muted">RBAC</span>
+      </div>
+    </div>
+  </div>
 
+  <div class="r" style="margin-top:56px">
+    <div class="tech-label"><i class="bi bi-cpu-fill"></i> Technologies &amp; Tools</div>
+    <p class="tech-sub">Hover to pause · Full modern stack</p>
+    <div class="marquee-wrap" style="margin-bottom:12px">
+      <div class="marquee-track">
+        <span class="mpill"><i class="bi bi-filetype-py" style="color:#f59e0b"></i>Python</span>
+        <span class="mpill"><i class="bi bi-layers" style="color:#10b981"></i>Django</span>
+        <span class="mpill"><i class="bi bi-speedometer2" style="color:#06b6d4"></i>Django REST Framework</span>
+        <span class="mpill"><i class="bi bi-database-fill" style="color:#06b6d4"></i>MySQL</span>
+        <span class="mpill"><i class="bi bi-server" style="color:#f97316"></i>MongoDB</span>
+        <span class="mpill"><i class="bi bi-shield-lock-fill" style="color:#7c3aed"></i>JWT Auth</span>
+        <span class="mpill"><i class="bi bi-filetype-html" style="color:#ef4444"></i>HTML</span>
+        <span class="mpill"><i class="bi bi-filetype-css" style="color:#3b82f6"></i>CSS</span>
+        <span class="mpill"><i class="bi bi-filetype-js" style="color:#eab308"></i>JavaScript</span>
+        <span class="mpill"><i class="bi bi-filetype-py" style="color:#f59e0b"></i>Python</span>
+        <span class="mpill"><i class="bi bi-layers" style="color:#10b981"></i>Django</span>
+        <span class="mpill"><i class="bi bi-speedometer2" style="color:#06b6d4"></i>Django REST Framework</span>
+        <span class="mpill"><i class="bi bi-database-fill" style="color:#06b6d4"></i>MySQL</span>
+        <span class="mpill"><i class="bi bi-server" style="color:#f97316"></i>MongoDB</span>
+        <span class="mpill"><i class="bi bi-shield-lock-fill" style="color:#7c3aed"></i>JWT Auth</span>
+      </div>
+    </div>
+    <div class="marquee-wrap">
+      <div class="marquee-track marquee-track-r">
+        <span class="mpill"><i class="bi bi-git" style="color:#f97316"></i>Git</span>
+        <span class="mpill"><i class="bi bi-github" style="color:#fff"></i>GitHub</span>
+        <span class="mpill"><i class="bi bi-bar-chart-fill" style="color:#8b5cf6"></i>Power BI</span>
+        <span class="mpill"><i class="bi bi-braces" style="color:#a78bfa"></i>OOP</span>
+        <span class="mpill"><i class="bi bi-box-seam" style="color:#10b981"></i>pip / virtualenv</span>
+        <span class="mpill"><i class="bi bi-cursor-fill" style="color:#06b6d4"></i>Cursor IDE</span>
+        <span class="mpill"><i class="bi bi-database" style="color:#06b6d4"></i>Django ORM</span>
+        <span class="mpill"><i class="bi bi-cup-hot-fill" style="color:#3b82f6"></i>Java</span>
+        <span class="mpill"><i class="bi bi-git" style="color:#f97316"></i>Git</span>
+        <span class="mpill"><i class="bi bi-github" style="color:#fff"></i>GitHub</span>
+        <span class="mpill"><i class="bi bi-bar-chart-fill" style="color:#8b5cf6"></i>Power BI</span>
+        <span class="mpill"><i class="bi bi-braces" style="color:#a78bfa"></i>OOP</span>
+        <span class="mpill"><i class="bi bi-box-seam" style="color:#10b981"></i>pip / virtualenv</span>
+        <span class="mpill"><i class="bi bi-cursor-fill" style="color:#06b6d4"></i>Cursor IDE</span>
+        <span class="mpill"><i class="bi bi-database" style="color:#06b6d4"></i>Django ORM</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="section">
-  <h2>Projects</h2>
+<div class="sec-divider"></div>
 
-  <div class="projects-grid">
-
-    <!-- Project 1 -->
-    <div class="project-card">
+<!-- 5. PROJECTS -->
+<section id="projects" class="sec">
+  <div class="r">
+    <div class="sec-eye">Projects</div>
+    <h2 class="sec-h">What I've Built</h2>
+  </div>
+  <div class="proj-grid">
+    <div class="proj-card feat r">
+      <div class="proj-feat-num">01</div>
+      <div class="proj-body">
+        <div class="proj-idx">INTERNSHIP · RKIT LABS · 01</div>
+        <h3>Real Estate E-Commerce Platform</h3>
+        <p>Full-stack property platform where users browse, search, and filter listings while admins manage the full inventory — automating manual data work by <strong class="stat-green">~30%</strong>. Built with Django REST Framework, JWT authentication, and Django ORM-backed MySQL.</p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Django</span><span class="tag">DRF</span><span class="tag">JWT</span><span class="tag">MySQL</span><span class="tag">HTML/CSS/JS</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-card r d1">
+      <div class="proj-idx">INTERNSHIP · RKIT LABS · 02</div>
+      <h3>Jewellery E-Commerce Website</h3>
+      <p>Full e-commerce site with product catalogue, shopping cart, order management, and admin panel — replacing manual inventory tracking and opening an online sales channel.</p>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">Django</span><span class="tag">REST APIs</span><span class="tag">MySQL</span>
+      </div>
+    </div>
+    <div class="proj-card r d2">
+      <div class="proj-idx">ACADEMIC PROJECT · 03</div>
       <h3>Student Dropout Management System</h3>
-      <p>
-        Developed a backend-driven system to track, analyze, and manage
-        student dropout patterns using structured data and analytics.
-      </p>
-      <span>Python · SQL · Data Analysis</span>
+      <p>Backend system to track, analyse, and manage student dropout patterns using structured data, SQL analytics, and Python-based reporting pipelines.</p>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Data Analysis</span><span class="tag">Backend</span>
+      </div>
     </div>
-
-    <!-- Project 2 -->
-    <div class="project-card">
+    <div class="proj-card r d1">
+      <div class="proj-idx">DATA PROJECT · 04</div>
       <h3>IPL Dataset Analysis</h3>
-      <p>
-        Performed exploratory data analysis on IPL datasets to identify
-        player performance metrics and match outcome trends.
-      </p>
-      <span>Python · Pandas · NumPy</span>
+      <p>Exploratory data analysis on IPL datasets surfacing player performance metrics and match outcome trends using Pandas and NumPy.</p>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
+      </div>
     </div>
-
-    <!-- Project 3 -->
-    <div class="project-card">
+    <div class="proj-card r d2">
+      <div class="proj-idx">PERSONAL PROJECT · 05</div>
       <h3>Professional Portfolio Website</h3>
-      <p>
-        Designed and developed a responsive personal portfolio showcasing
-        projects, skills, and experience with a modern UI.
-      </p>
-      <span>HTML · CSS · JavaScript</span>
+      <p>This responsive portfolio — custom animated particle UI, scroll reveals, and interactive elements showcasing skills, experience and projects.</p>
+      <div class="tags">
+        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+      </div>
     </div>
-
-    <!-- Project 4 (JAVA FULL STACK) -->
-    <div class="project-card">
-      <h3>Real Estate Management Webiste</h3>
-      <p>
-        Built a Java full stack web application for a real estate company
-        to manage property listings, user interactions, and business data.
-      </p>
-      <span>Java · Spring Boot · HTML · CSS · JavaScript · MySQL</span>
-    </div>
-
-    <!-- Project 5 (PYTHON FULL STACK) -->
-    <div class="project-card">
-      <h3>Ecommerce Website(Jewellery)</h3>
-      <p>
-        Developed a full stack web application using Python for backend
-        logic, database integration, and a responsive frontend interface.
-      </p>
-      <span>Python · Django · HTML · CSS · JavaScript · MySQL</span>
-    </div>
-
   </div>
 </section>
 
+<div class="sec-divider"></div>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section contact-section">
-  <h2 class="contact-title">Let’s Connect</h2>
+<!-- 6. SERVICES -->
+<section id="services" class="sec sec-dark">
+  <div class="r">
+    <div class="sec-eye">Services</div>
+    <h2 class="sec-h">What I Do</h2>
+  </div>
+  <div class="srv-grid">
+    <div class="srv-card r d1">
+      <div class="srv-num">01</div>
+      <div class="srv-ico srv-ico-a"><i class="bi bi-filetype-py"></i></div>
+      <h3>Python &amp; Django Development</h3>
+      <p>Building clean, scalable web apps with Python and Django — REST APIs, ORM models, JWT auth, and well-structured business logic.</p>
+    </div>
+    <div class="srv-card r d2">
+      <div class="srv-num">02</div>
+      <div class="srv-ico srv-ico-b"><i class="bi bi-hdd-stack-fill"></i></div>
+      <h3>Backend &amp; API Engineering</h3>
+      <p>Designing robust REST APIs with DRF — auth, serializers, viewsets, and query optimisation for fast, reliable back-ends.</p>
+    </div>
+    <div class="srv-card r d3">
+      <div class="srv-num">03</div>
+      <div class="srv-ico srv-ico-c"><i class="bi bi-window-stack"></i></div>
+      <h3>Full Stack Web Apps</h3>
+      <p>End-to-end delivery from database schema design to frontend integration — clean code, responsive UI, and real users in mind.</p>
+    </div>
+    <div class="srv-card r d1">
+      <div class="srv-num">04</div>
+      <div class="srv-ico srv-ico-d"><i class="bi bi-database-fill-gear"></i></div>
+      <h3>Database Design</h3>
+      <p>Normalised MySQL &amp; MongoDB schemas, optimised ORM queries, and efficient data layers that stay performant as data grows.</p>
+    </div>
+    <div class="srv-card r d2">
+      <div class="srv-num">05</div>
+      <div class="srv-ico srv-ico-e"><i class="bi bi-bar-chart-line-fill"></i></div>
+      <h3>Data Analysis</h3>
+      <p>Extracting insights from structured datasets — Power BI dashboards, Python analytics, and data-informed decision making.</p>
+    </div>
+    <div class="srv-card r d3">
+      <div class="srv-num">06</div>
+      <div class="srv-ico srv-ico-f"><i class="bi bi-shield-check"></i></div>
+      <h3>Auth &amp; Security</h3>
+      <p>JWT-based auth systems with role-based access control — separating admin and user permissions for secure, maintainable apps.</p>
+    </div>
+  </div>
+</section>
 
-  <div class="contact-glass">
+<div class="sec-divider"></div>
 
-    <!-- LEFT -->
-    <div class="contact-info">
+<!-- 7. CONTACT -->
+<section id="contact" class="sec">
+  <div class="r" style="text-align:center">
+    <div class="sec-eye" style="justify-content:center">Contact</div>
+    <h2 class="sec-h contact-h">Let's Connect</h2>
+  </div>
+  <div class="contact-shell r">
+    <div class="ci">
       <h3>Get in touch</h3>
-      <p>
-        Have a question, opportunity, or just want to say hello?
-        My inbox is always open.
-      </p>
-
-      <a href="mailto:cbmokshagna@gmail.com" class="contact-item link">
-        <i class="bi bi-envelope-fill"></i>
-        <span>cbmokshagna@gmail.com</span>
+      <p>Have an opportunity, a project idea, or just want to say hello? My inbox is always open.</p>
+      <a href="tel:+919390401228" class="clink clink-ph">
+        <i class="bi bi-telephone-fill"></i> +91-9390401228
       </a>
-
-      <a
-        href="https://www.linkedin.com/in/mokshagna-chary-b-538087224"
-        target="_blank"
-        class="contact-item link"
-      >
-        <i class="bi bi-linkedin"></i>
-        <span>LinkedIn Profile</span>
+      <a href="mailto:mokshagna.bheemavaram@gmail.com" class="clink clink-em">
+        <i class="bi bi-envelope-fill"></i> mokshagna.bheemavaram@gmail.com
       </a>
-
-      <a
-        href="https://github.com/Mokshagna1234"
-        target="_blank"
-        class="contact-item link"
-      >
-        <i class="bi bi-github"></i>
-        <span>GitHub Profile</span>
+      <a href="https://www.linkedin.com/in/mokshagna-chary-bheemavaram-538087224/" target="_blank" class="clink clink-li">
+        <i class="bi bi-linkedin"></i> LinkedIn Profile
       </a>
+      <a href="https://github.com/Mokshagna1234" target="_blank" class="clink clink-gh">
+        <i class="bi bi-github"></i> GitHub Profile
+      </a>
+      <div class="ci-location">
+        <i class="bi bi-geo-alt-fill"></i> Bengaluru, Karnataka, India
+      </div>
     </div>
-
-    <!-- RIGHT -->
-<form
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  action="/success.html"
-  class="contact-form"
->
-  <!-- REQUIRED hidden input -->
-  <input type="hidden" name="form-name" value="contact" />
-
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-  />
-
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-  />
-
-  <textarea
-    name="message"
-    placeholder="Your Message"
-    required
-  ></textarea>
-
-  <button type="submit" class="btn primary">
-    Send Message
-  </button>
-</form>
-
-
+    <form name="contact" method="POST" data-netlify="true" action="/success.html" class="cform">
+      <input type="hidden" name="form-name" value="contact"/>
+      <input  type="text"  name="name"    placeholder="Your Name"    required/>
+      <input  type="email" name="email"   placeholder="Your Email"   required/>
+      <textarea            name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">
+        <span><i class="bi bi-send-fill"></i> Send Message</span>
+      </button>
+    </form>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  © 2026 Mokshagna. All rights reserved.
+<footer>
+  &copy; 2025 <b>Mokshagna Chary Bheemavaram</b> &nbsp;&middot;&nbsp; Python Developer &nbsp;&middot;&nbsp; Bengaluru, India
 </footer>
 
-<script src="script.js" defer></script>
-
-<!-- Optional Cursor Effect -->
-<div class="cursor"></div>
-
+<script src="script.js"></script>
 </body>
 </html>
